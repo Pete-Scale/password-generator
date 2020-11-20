@@ -9,6 +9,19 @@ var numCharCodes = generateArray(48, 57)
 
 var specCharCodes = generateArray(33, 47).concat(generateArray(58, 64)).concat(generateArray(91, 96)).concat(generateArray(123, 126))
 
+function generateArray(low, high) {
+  var charArray = []
+  for (var i = low; i <= high; i++) {
+    charArray.push(i)
+  }
+  return charArray
+}
+
+console.log(lowCaseCharCodes)
+console.log(upCaseCharCodes)
+console.log(numCharCodes)
+console.log(specCharCodes)
+
 
 // Write password to the #password input
 function writePassword() {
