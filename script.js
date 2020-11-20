@@ -15,7 +15,12 @@ function chooseLength(){
 }
 
 // Confirm for user choosing types of characters to include
-
+function chooseCharTypes(){
+  confirm('Include lowercase letters?')
+  confirm('Include uppercase letters?')
+  confirm('Include numbers?')
+  confirm('Include special characters?')
+}
 
 // Generates array full of numbers from ascii code 
 function generateArray(low, high) {
@@ -33,6 +38,7 @@ function generateArray(low, high) {
 function generatePassword(){
 
   chooseLength()
+  chooseCharTypes()
 }
 
 
