@@ -66,6 +66,7 @@ function generatePassword(){
       var eachChar = finalCharArray[Math.floor(Math.random() * finalCharArray.length)]
       passwordArray.push(String.fromCharCode(eachChar))
     }
+    passwordArray.join()
   }
 
     console.log(lengthChoice)
