@@ -19,10 +19,13 @@ function chooseLength(){
 
 // Confirm for user choosing types of characters to include
 function chooseCharTypes(){
-  confirm('Include lowercase letters?')
-  confirm('Include uppercase letters?')
-  confirm('Include numbers?')
-  confirm('Include special characters?')
+  var includeLowCase = confirm('Include lowercase letters?')
+  var includeUpCase = confirm('Include uppercase letters?')
+  var includeNums = confirm('Include numbers?')
+  var includeSpecChars = confirm('Include special characters?')
+  if ((includeLowCase === false && includeUpCase === false) && (includeNums === false && includeSpecChars === false)){
+    chooseCharTypes();
+  } else return
 }
 
 // Generates array full of numbers from ascii code 
