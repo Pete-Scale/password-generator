@@ -10,12 +10,7 @@ var numCharCodes = generateArray(48, 57)
 var specCharCodes = generateArray(33, 47).concat(generateArray(58, 64)).concat(generateArray(91, 96)).concat(generateArray(123, 126))
 
 // Prompt for user typing in a number between 8-128
-function chooseLength(){
-  var lengthChoice = parseInt(prompt('Choose password length between 8 and 128 characters'))
-  if (lengthChoice >= 8 && lengthChoice <=128){
-    return generateArray();
-  } else chooseLength();
-}
+
 
 // Generates array full of numbers from ascii code 
 function generateArray(low, high) {
@@ -28,22 +23,46 @@ function generateArray(low, high) {
 
 // Translate array of ascii code numbers to characters
 
-
 // Combine user choices to generate password
 function generatePassword(){
-  // Run function for chosen length
-  chooseLength();
+
+  //  Prompt for user choosing length
+  var lengthChoice = parseInt(prompt('Choose password length between 8 and 128 characters'))
+  
+  // Reload page if length is outside perameters
+    if (lengthChoice >= 8 && lengthChoice <=128){
+    } else location = location 
+
   // Confirm for user including lowercase
   var includeLowCase = confirm('Include lowercase letters?')
+
   // Confirm for user including uppercase
   var includeUpCase = confirm('Include uppercase letters?')
+
   // Confirm for user including numbers
   var includeNums = confirm('Include numbers?')
+
   // Confirm for user including special characters
   var includeSpecChars = confirm('Include special characters?') 
+
   if ((includeLowCase === false && includeUpCase === false) && (includeNums === false && includeSpecChars === false)) {
-    generatePassword();
-  } else
+    location = location;
+  } else {
+    var finalCharArray = []
+    if (includeLowCase === true) {
+      finalCharArray = finalCharArray.concat(lowCaseCharCodes)
+    }
+    if (includeUpCase === true) {
+      finalCharArray = finalCharArray.concat(upCaseCharCodes)
+    }
+    if (includeNums === true) {
+      finalCharArray = finalCharArray.concat(numCharCodes)
+    }
+    if (includeSpecChars === true) {
+      finalCharArray = finalCharArray.concat(specCharCodes)
+    }
+  }
+    console.log(lengthChoice)
     console.log(includeLowCase)
     console.log(includeUpCase)
     console.log(includeNums)
