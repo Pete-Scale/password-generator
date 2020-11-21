@@ -37,8 +37,8 @@ function generatePassword(){
   var lengthChoice = parseInt(prompt('Choose password length between 8 and 128 characters'))
   
   // Reload page if length is outside perameters
-    if (lengthChoice >= 8 && lengthChoice <=128){
-    } else location = location 
+  if (lengthChoice >= 8 && lengthChoice <=128){
+  } else location = location 
 
   // Confirm for user including lowercase
   var includeLowCase = confirm('Include lowercase letters?')
