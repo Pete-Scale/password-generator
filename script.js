@@ -61,8 +61,13 @@ function generatePassword(){
     if (includeSpecChars === true) {
       finalCharArray = finalCharArray.concat(specCharCodes)
     }
+    var passwordArray = []
+    for (var i = 0; i < lengthChoice; i++){
+      var eachChar = finalCharArray[Math.floor(Math.random() * finalCharArray.length)]
+      passwordArray.push(String.fromCharCode(eachChar))
+    }
   }
-  
+
     console.log(lengthChoice)
     console.log(includeLowCase)
     console.log(includeUpCase)
