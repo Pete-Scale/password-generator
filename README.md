@@ -2,7 +2,7 @@
 
 ![Pete Scale Webpage](./assets/password_generator.png)
 
-Used Bootstrap CSS Framework to create a mobile responsive portfolio.
+Used JavaScript to create a random password generator.
 
 ## Table of Contents
 [Description](#description)
@@ -17,7 +17,15 @@ Used Bootstrap CSS Framework to create a mobile responsive portfolio.
 
 ## Description
 
-Making a webpage for myself to display my portfolio and for networking. Consisting of a responsive layout, responsive images, and a consistent navbar. Three pages in total with an About me, a Contact, and a Portfolio page. Using media queries when necessary to keep the pages responsive, but using Bootstrap portfolio to minimize the need for them. Adding links to my Contact page so people can contact me and links to my Portfolio page so people can view my projects.
+Created a randomly generated password that takes into account several users choices:
+
+* length of password
+* include lowercase letters
+* include uppercase letters
+* include numbers
+* include special characters
+
+This way I can create a strong password that provides greater security based on these user preferences.
 
 ---
 
