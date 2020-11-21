@@ -62,6 +62,7 @@ function generatePassword(){
       finalCharArray = finalCharArray.concat(specCharCodes)
     }
   }
+  
     console.log(lengthChoice)
     console.log(includeLowCase)
     console.log(includeUpCase)
