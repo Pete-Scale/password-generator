@@ -93,6 +93,10 @@ button[disabled] {
   background: #c0c7cf;
 }
 
+button:focus {
+  outline: none;
+}
+
 .float-right {
   float: right;
 }
