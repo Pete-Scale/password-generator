@@ -11,7 +11,10 @@ var specCharCodes = generateArray(33, 47).concat(generateArray(58, 64)).concat(g
 
 // Prompt for user typing in a number between 8-128
 function chooseLength(){
-  parseInt(prompt('Choose password length between 8 and 128 characters'))
+  var lengthChoice = parseInt(prompt('Choose password length between 8 and 128 characters'))
+  if (lengthChoice >= 8 && lengthChoice <=128){
+    return
+  } else chooseLength();
 }
 
 // Confirm for user choosing types of characters to include
@@ -36,7 +39,6 @@ function generateArray(low, high) {
 
 // Combine user choices to generate password
 function generatePassword(){
-
   chooseLength()
   chooseCharTypes()
 }
