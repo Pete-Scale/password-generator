@@ -1,9 +1,9 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-var lowCaseCharCodes = generateArray(65, 90)
+var lowCaseCharCodes = generateArray(97, 122)
 
-var upCaseCharCodes = generateArray(97, 122)
+var upCaseCharCodes = generateArray(65, 90)
 
 var numCharCodes = generateArray(48, 57)
 

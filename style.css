@@ -97,6 +97,10 @@ button:focus {
   outline: none;
 }
 
+button:hover {
+  background: darkred;
+}
+
 .float-right {
   float: right;
 }
