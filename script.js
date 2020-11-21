@@ -13,19 +13,8 @@ var specCharCodes = generateArray(33, 47).concat(generateArray(58, 64)).concat(g
 function chooseLength(){
   var lengthChoice = parseInt(prompt('Choose password length between 8 and 128 characters'))
   if (lengthChoice >= 8 && lengthChoice <=128){
-    return
+    return generateArray();
   } else chooseLength();
-}
-
-// Confirm for user choosing types of characters to include
-function chooseCharTypes(){
-  var includeLowCase = confirm('Include lowercase letters?')
-  var includeUpCase = confirm('Include uppercase letters?')
-  var includeNums = confirm('Include numbers?')
-  var includeSpecChars = confirm('Include special characters?')
-  if ((includeLowCase === false && includeUpCase === false) && (includeNums === false && includeSpecChars === false)){
-    chooseCharTypes();
-  } else return
 }
 
 // Generates array full of numbers from ascii code 
@@ -42,8 +31,24 @@ function generateArray(low, high) {
 
 // Combine user choices to generate password
 function generatePassword(){
-  chooseLength()
-  chooseCharTypes()
+  // Run function for chosen length
+  chooseLength();
+  // Confirm for user including lowercase
+  var includeLowCase = confirm('Include lowercase letters?')
+  // Confirm for user including uppercase
+  var includeUpCase = confirm('Include uppercase letters?')
+  // Confirm for user including numbers
+  var includeNums = confirm('Include numbers?')
+  // Confirm for user including special characters
+  var includeSpecChars = confirm('Include special characters?') 
+  if ((includeLowCase === false && includeUpCase === false) && (includeNums === false && includeSpecChars === false)) {
+    generatePassword();
+  } else
+    console.log(includeLowCase)
+    console.log(includeUpCase)
+    console.log(includeNums)
+    console.log(includeSpecChars)
+
 }
 
 
