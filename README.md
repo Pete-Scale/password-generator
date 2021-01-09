@@ -1,8 +1,14 @@
 # Password-Generator README
 
-![Pete Scale Webpage](./Assets/password_generator.png)
+![Pete Scale Webpage](./assets/password_generator.png)
 
 Used JavaScript to create a random password generator.
+
+## Link
+
+https://pete-scale.github.io/password-generator/
+
+---
 
 ## Table of Contents
 [Description](#description)
